@@ -11,11 +11,11 @@ title: Techslam
 description: 'Technical Blog by Aslam.'
 
 # Replace with your domain, e.g. "https://username.github.io"
-url: 'https://techslam2.github.io'
+url: 'https://techslam.github.io'
 
 author: Aslam                          # change to your full name
 
-logo: /assets/img/sample/profile.jpg    # Support network resources.
+logo: /assets/img/sample/techslam.jpeg    # Support network resources.
 
 github:
   username: techslam             # change to your github username
