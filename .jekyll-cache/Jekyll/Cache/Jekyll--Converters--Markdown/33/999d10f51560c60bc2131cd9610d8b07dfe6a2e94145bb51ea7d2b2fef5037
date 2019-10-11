@@ -1,0 +1,88 @@
+I"‘<h2 id="basic-environment">Basic Environment</h2>
+
+<p>First of all, follow the <a href="https://jekyllrb.com/docs/installation/">Jekyll Docs</a>  to complete the basic environment (Ruby, RubyGem, Bundler and Jekyll)  installation.</p>
+
+<p>In addition, the <a href="https://www.python.org/downloads/">Python</a> and <a href="https://pypi.org/project/ruamel.yaml/">ruamel.yaml</a> are also required.</p>
+
+<h2 id="configuration">Configuration</h2>
+
+<p>Customize the variables in file <code class="highlighter-rouge">_config.yml</code> as needed.</p>
+
+<h2 id="atom-feed">Atom Feed</h2>
+
+<p>The Atom feed url of your site will be:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;site_url&gt;/feed.xml
+</code></pre></div></div>
+
+<p>The <code class="highlighter-rouge">site_url</code> was defined by variable <code class="highlighter-rouge">url</code> in file <code class="highlighter-rouge">_config.yml</code>.</p>
+
+<h2 id="install-jekyll-plugins">Install Jekyll Plugins</h2>
+
+<p>In the root direcoty of the project, run the following command:</p>
+
+<div class="language-terminal highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>bundle <span class="nb">install</span>
+</code></pre></div></div>
+
+<p><code class="highlighter-rouge">bundle</code> will install all dependent Jekyll Plugins declared in <code class="highlighter-rouge">Gemfile</code> that stored in the root automatically.</p>
+
+<h2 id="run-locally">Run Locally</h2>
+
+<p>You may want to preview the site before publishing. Run the script in the root directory:</p>
+
+<div class="language-terminal highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>bash run.sh
+</code></pre></div></div>
+<blockquote>
+  <p><strong>Note</strong>: Because the <em>Recent Update</em> required the latest git-log date of posts, make sure the changes of <code class="highlighter-rouge">_posts</code> have been committed before running this command.</p>
+</blockquote>
+
+<p>Open the brower and visit <a href="http://127.0.0.1:4000">http://127.0.0.1:4000</a></p>
+
+<h2 id="deploying-to-github-pages">Deploying to GitHub Pages</h2>
+
+<h3 id="option-1-local-build">Option 1: Local Build</h3>
+
+<p>For security reasons, GitHub Pages runs on <code class="highlighter-rouge">safe</code> mode, which means the third-party Jekyll plugins or custom scripts will not work. If you want to use any another third-party Jekyll plugins, <strong>your have to build locally rather than on GitHub Pages</strong>.</p>
+
+<p><strong>1</strong>. On GitHub website, create a brand new repository with name <code class="highlighter-rouge">&lt;username&gt;.github.io</code>, then clone it locally.</p>
+
+<p><strong>2</strong>. Build your site by:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>bash build.sh <span class="nt">-d</span> /path/to/&lt;username&gt;.github.io/
+</code></pre></div></div>
+
+<p>The build results will be stored in the root directory of <code class="highlighter-rouge">&lt;username&gt;.github.io</code> and donâ€™t forget to push the changes of <code class="highlighter-rouge">&lt;username&gt;.github.io</code> to branch <code class="highlighter-rouge">master</code> on GitHub.</p>
+
+<p><strong>3</strong>. Go to GitHub website and enable GitHub Pages service for the new repository <code class="highlighter-rouge">&lt;username&gt;.github.io</code>.</p>
+
+<p><strong>4</strong>. Visit <code class="highlighter-rouge">https://&lt;username&gt;.github.io</code> and enjoy.</p>
+
+<h3 id="option-2-built-by-github-pages">Option 2: Built by GitHub Pages</h3>
+
+<p>By deploying your site in this way, you can push the source code to GitHub repository directly.</p>
+
+<blockquote>
+  <p><strong>Note</strong>: If you want to add any third-party Jekyll plugins or custom scripts to your project, please refer to <a href="#option-1-build-locally"><em>Option 1: Build locally</em></a>.</p>
+</blockquote>
+
+<p><strong>1</strong>. Rename your repository as <code class="highlighter-rouge">&lt;username&gt;.github.io</code>.</p>
+
+<p><strong>2</strong>. Commit the changes of your repository before running the initialization script:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>bash init.sh
+</code></pre></div></div>
+
+<p>It will automatically generates the <em>Latest Modified Date</em> and <em>Categories / Tags</em> page for the posts.</p>
+
+<p><strong>3</strong>. Push the changes to <code class="highlighter-rouge">origin/master</code> then go to GitHub website and enable GitHub Pages service for the repository <code class="highlighter-rouge">&lt;username&gt;.github.io</code>.</p>
+
+<p><strong>4</strong>. Visit <code class="highlighter-rouge">https://&lt;username&gt;.github.io</code> and enjoy.</p>
+
+<h2 id="see-also">See Also</h2>
+
+<ul>
+  <li><a href="/posts/write-a-new-post/">Write a new post</a></li>
+  <li><a href="/posts/text-and-typography/">Text and Typography</a></li>
+  <li><a href="/posts/customize-the-favicon/">Customize the Favicon</a></li>
+</ul>
+:ET

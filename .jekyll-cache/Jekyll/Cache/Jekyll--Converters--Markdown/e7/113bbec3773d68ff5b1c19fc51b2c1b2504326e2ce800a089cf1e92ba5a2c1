@@ -1,0 +1,28 @@
+I"ú<p>The image files of <a href="https://www.favicon-generator.org/about/">Favicons</a> are placed in <code class="highlighter-rouge">assets/img/favicons</code>. You may need to replace them with your own. So letâ€™s see how to customize these Favicons.</p>
+
+<p>Whit a square image (PNG, JPG or GIF) in hand, open the site <a href="https://www.favicon-generator.org/"><em>Favicon &amp; App Icon Generator</em></a> and upload your original image.</p>
+
+<p><img src="/assets/img/sample/upload-image.png" alt="upload-image" /></p>
+
+<p>Wait a moment for the website to generate icons of various sizes automatically.</p>
+
+<p><img src="/assets/img/sample/download-icons.png" alt="download-icons" /></p>
+
+<p>Download the generated package and extract the contents to cover all files in folder <code class="highlighter-rouge">assets/img/favicons</code>, but except the following two:</p>
+
+<ul>
+  <li>browserconfig.xml</li>
+  <li>manifest.json</li>
+</ul>
+
+<p>At last, rebuild the site so that the icon becomes your custom edition.</p>
+
+<h2 id="see-also">See Also</h2>
+
+<ul>
+  <li><a href="/posts/getting-started/">Getting Started</a></li>
+  <li><a href="/posts/write-a-new-post/">Write a new post</a></li>
+  <li><a href="/posts/text-and-typography/">Text and Typography</a></li>
+</ul>
+
+:ET
