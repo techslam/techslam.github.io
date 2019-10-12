@@ -49,11 +49,20 @@ layout: default
         {{ content }}
       </div><!-- .post-content -->
 
+      <div class="social-share">
+        <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}&via={{ site.twitter.username }}&related={{ site.twitter.username }}"
+          onclick="gtag('event', 'tweet', { 'event_category': 'Social', 'event_label': 'New Tweet' });"
+          class="tweet-button" rel="nofollow" target="_blank" title="Share on Twitter">
+        <i></i> Tweet
+        </a>
+      </div>
+
       <div class="post-tail text-muted">
         <!-- Tags -->
         {% if page.tags.size > 0 %}
         <div class="mb-2">
           {% for tag in page.tags %}
+          Tags : 
           <a href="{{ site.baseurl }}/tags/{{ tag | replace: ' ', '-' | downcase }}/"
             class="post-tag no-text-decoration" >
             {{- tag -}}
@@ -63,7 +72,10 @@ layout: default
         {% endif %}
 
       </div><!-- endof .post-tail -->
-
+     
+      <div id='post-footer'>
+        {% include bio.html %}
+      </div>
     </div> <!-- .post -->
 
     <div class="post-pager d-flex justify-content-between">

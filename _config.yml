@@ -8,7 +8,7 @@
 
 title: Techslam
 
-description: 'Technical Blog by Aslam.'
+description: 'A Technical Blog by Aslam.'
 
 # Replace with your domain, e.g. "https://username.github.io"
 url: 'https://techslam.github.io'
@@ -32,13 +32,13 @@ social:
     # - https://www.facebook.com/username
     # - https://www.linkedin.com/in/username
 
-google_site_verification: google_meta_tag_verification # change to your verification string
+google_site_verification: googlebbcf89216b32bb9c.html # change to your verification string
 
 #--------------------------
 
 # Change to your Google Analytics ID
 google_analytics:
-  id: 'UA-*********-*'
+  id: 'UA-149906857-1'
   # Switch for Google Analytics pageviews. DO NOT enable it unless you know how to deploy the Google Analytics superProxy.
   pv: false
 
