@@ -1,6 +1,6 @@
 ---
 title: "Set default Python version to Python3"
-date: 2019-10-13 13:00:00 +0100
+date: 2019-10-13 13:00:00 +0800
 categories: [Ubuntu, Python]
 tags: [version]
 ---
