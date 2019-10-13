@@ -1,8 +1,10 @@
 ---
-title: "Set default Python version to Python3"
+title: Set default Python version to Python3
 date: 2019-10-13 13:00:00 +0800
 categories: [Ubuntu, Python]
 tags: [version]
+seo:
+  date_modified: 2019-10-13 21:47:51 +0100
 ---
 
 A lot of us out there face issues while trying to point latest Python version as default. If you are facing issues while trying to install latest Python3 in your Ubuntu PC , but every attempt to change the default python version is in vain ?
