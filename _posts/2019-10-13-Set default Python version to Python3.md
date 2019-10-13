@@ -13,7 +13,7 @@ I had to try a number of trial an error options before finally finding a simple 
 
 Follow below simple steps and this should get your linux machine python installation default to Python3.
 
-Assuming yur current version is Python 2.7, say Python. And you have already performed Python3 installation, say Python 3.7
+Assuming your current version is Python2, say Python 2.7 . And you have already performed Python3 installation, say Python 3.7
 
 Add Python2.7 & Python 3.7 to `update-alternatives`
 
