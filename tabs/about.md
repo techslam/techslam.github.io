@@ -6,30 +6,33 @@ title: About
 # MIT License
 ---
 
-**Chirpy** is an responsive web design Jekyll theme developed using Bootstrap 4.
+**Techslam** - A Technical blog by Aslam.
 
 
-## Features
+## Mohammed Aslam
 
-* Last modified date
-* Table of Contents
-* Disqus Comments
-* Syntax highlighting
-* Two-level Categories
-* Search
-* HTML compress
-* Atom feeds
-* Google Analytics
-* Pageviews (Advanced)
+* Software Consultant.
+* Markit Enterprise Data Management Developer.
+* Microsoft SQL Server.
+* Asset Management.
+* Experienced in Mainframe/Cobol.
+* Ruby On Rails enthusiast. Previously worked for a startup to build RoR apps.
+* Blogs on web technologies and Corporate Culture.
+* Not another "corporate" IT guy !
+* Blogging for passion.
+* Jekyll Enthusiast.
 
-## Homepage
+## Location
 
-You can fork this project from the [Homepage](https://github.com/cotes2020/jekyll-theme-chirpy/). Any issues and suggestions are welcome!
+* Edinburgh, United Kingdom
+* Pune , India
 
-## Usage
+## Social
 
-Follow the [tutorial posts]({{ site.baseurl }}/categories/tutorial/), it will help you build a site quickly.
+* [Twitter](https://twitter.com/tweeslam)
+* [Linkedin](https://www.linkedin.com/in/mohammed-aslam-224ab613)
+* [Email](mailto:aslam9895@gmail.com)
 
-## License
+## GitHub
 
-This project is published under the [MIT License](https://github.com/cotes2020/jekyll-theme-chirpy/blob/master/LICENSE).
+* [Github](https://github.com/techslam)
