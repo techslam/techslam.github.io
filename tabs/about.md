@@ -14,6 +14,7 @@ title: About
 * Software Consultant.
 * Markit Enterprise Data Management Developer.
 * Microsoft SQL Server.
+* Autosys Scheduler
 * Asset Management.
 * Experienced in Mainframe/Cobol.
 * Ruby On Rails enthusiast. Previously worked for a startup to build RoR apps.
