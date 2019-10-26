@@ -7,7 +7,7 @@ tags: [renewable resource]
 
 Last week at work I was asigned a product backlog item which involved a bit of Autosys Development work in it. The requirement for Autosys work involved creation of 6 new jobs that would run the same MEDM Solution but with different Configurable Parameters. All these 6 jobs would be scheduled at the same time without any dependency between them. Which means these jobs could run at the same time and result in deadlock problems in the batch.
 
-So to prevent this , the requirement was to ensure they don't run at the same time and to use `GLOBAL_VARIABLE` functionality. I have previously worked on IBM TWS Scheduler, So I was aware about scheduler functionality of 'Special Resource' which could be used to prevent jobs from triggering at the same time. Autosys does have this feature and to my surprise my project Autosys developers were never aware of this an they would use `GLOBAL VARIABLE' based dependencies which made the batch too complex.
+So to prevent this , the requirement was to ensure they don't run at the same time and to use `GLOBAL_VARIABLE` functionality. I have previously worked on IBM TWS Scheduler, So I was aware about scheduler functionality of 'Special Resource' which could be used to prevent jobs from triggering at the same time. Autosys does have this feature and to my surprise my project Autosys developers were never aware of this and they would use `GLOBAL VARIABLE' based dependencies which made the batch too complex.
 
 A quick read through about Autosys Rebewable Resource from CA website was enough and I implemented this on my current task and also educated rest of the team members about the same.
 
@@ -35,4 +35,4 @@ insert_job: my_job_1
 
 When a job is submitted, one unit of the resource is temporarily removed from the resource pool. Because there are only 1 unit, only 1 of these jobs can run on any machine. Other jobs that require this resurce cannot be submitted because no resources are available. When a job that is running completes, one unit of the resource is returned to the resource pool. Another job can be submitted because a unit is now available.
 
-If you are here searching for a solution on how Autosys can prevent multiple jobs from running aat the same time, Hope this post might have been of some help.
+If you are here searching for a solution on how Autosys can prevent multiple jobs from running at the same time, Hope this post might have been of some help.
