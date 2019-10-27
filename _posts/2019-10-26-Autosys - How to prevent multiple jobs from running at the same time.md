@@ -7,7 +7,7 @@ tags: [renewable resource]
 
 Last week at work I was asigned a product backlog item which involved a bit of Autosys Development work in it. The requirement for Autosys work involved creation of 6 new jobs that would run the same MEDM Solution but with different Configurable Parameters. All these 6 jobs would be scheduled at the same time without any dependency between them. Which means these jobs could run at the same time and result in deadlock problems in the batch.
 
-So to prevent this , the requirement was to ensure they don't run at the same time and to use `GLOBAL_VARIABLE` functionality. I have previously worked on IBM TWS Scheduler, So I was aware about scheduler functionality of 'Special Resource' which could be used to prevent jobs from triggering at the same time. Autosys does have this feature and to my surprise my project Autosys developers were never aware of this and they would use `GLOBAL VARIABLE' based dependencies which made the batch too complex.
+So to prevent this , the requirement was to ensure they don't run at the same time and to use `GLOBAL_VARIABLE` functionality. I have previously worked on IBM TWS Scheduler, So I was aware about scheduler functionality of 'Special Resource' which could be used to prevent jobs from triggering at the same time. Autosys does have this feature and to my surprise my project Autosys developers were never aware of this and they would use `GLOBAL VARIABLE` based dependencies which made the batch too complex.
 
 A quick read through about Autosys Rebewable Resource from CA website was enough and I implemented this on my current task and also educated rest of the team members about the same.
 
