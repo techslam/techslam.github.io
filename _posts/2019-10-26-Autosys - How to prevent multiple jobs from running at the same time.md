@@ -1,8 +1,10 @@
 ---
-title: "Autosys - How to prevent multiple jobs from running at the same time"
+title: Autosys - How to prevent multiple jobs from running at the same time
 date: 2019-10-26 13:00:00 +0100
 categories: [Scheduler, Autosys]
 tags: [autosys, renewable resource]
+seo:
+  date_modified: 2019-10-28 20:56:49 +0000
 ---
 
 Last week at work I was asigned a product backlog item which involved a bit of Autosys Development work in it. The requirement for Autosys work involved creation of 6 new jobs that would run the same MEDM Solution but with different Configurable Parameters. All these 6 jobs would be scheduled at the same time without any dependency between them. Which means these jobs could run at the same time and result in deadlock problems in the batch.
