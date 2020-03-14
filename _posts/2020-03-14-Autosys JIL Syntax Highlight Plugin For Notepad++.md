@@ -17,11 +17,9 @@ Link to download the plugin file.
 
 Below is the screencast which should help you how to import this plugin and start using it.
 
-[Sample Link](https://www.example.com/) 
-Sample courier new style `this is a code`
 
 
-![image-name]({{ site.baseurl }}/assets/img/sample/techslam.jpeg)
+![image-name]({{ site.baseurl }}/assets/img/sample/How to Import AutosysJILPlugin.mp4)
 
 ## See Also
 
