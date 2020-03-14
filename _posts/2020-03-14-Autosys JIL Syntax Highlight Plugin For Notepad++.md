@@ -15,11 +15,8 @@ So I decided to create one with the help of already existing templates.
 
 Link to download the plugin file.
 
-Below is the screencast which should help you how to import this plugin and start using it.
 
-
-
-![image-name]({{ site.baseurl }}/assets/img/sample/How to Import AutosysJILPlugin.mp4)
+[Watch the screencast on how to install this plugin](https://www.youtube.com/watch?v=0qilnS-sync) 
 
 ## See Also
 
