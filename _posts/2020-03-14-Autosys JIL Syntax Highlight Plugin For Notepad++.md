@@ -13,8 +13,7 @@ I did some online research to find some good plugins , however the most I found 
 
 So I decided to create one with the help of already existing templates.
 
-Link to download the plugin file.
-
+[Link to download the plugin file]({{ site.baseurl }}/assets/data/TechslamJilSyntax.zip)
 
 [Watch the screencast on how to install this plugin](https://www.youtube.com/watch?v=0qilnS-sync) 
 
