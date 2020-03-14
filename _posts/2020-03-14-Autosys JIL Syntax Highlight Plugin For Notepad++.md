@@ -4,7 +4,7 @@ date: 2020-03-14 19:00:00 +0100
 categories: [Autosys, Scheduler]
 tags: [Autosys]
 seo:
-  date_modified: 2020-03-14 19:51:36 +0000
+  date_modified: 2020-03-14 19:55:01 +0000
 ---
 
 In my day job as an Autosys developer, I have to create new JILs every other day or have to review/QA JILs created by other developers. I mostly use Notepad++ to create and read JILs, however Notepad++ does not have an inbuilt syntax highlighting language option. Without one it is too difficult to write a JIL and understand it and find any syntax error, Just like any other programming language.
