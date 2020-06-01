@@ -38,7 +38,3 @@ insert_job: my_job_1
 When a job is submitted, one unit of the resource is temporarily removed from the resource pool. Because there are only 1 unit, only 1 of these jobs can run on any machine. Other jobs that require this resurce cannot be submitted because no resources are available. When a job that is running completes, one unit of the resource is returned to the resource pool. Another job can be submitted because a unit is now available.
 
 If you are here searching for a solution on how Autosys can prevent multiple jobs from running at the same time, Hope this post might have been of some help.
-
-## See Also
-
-* [Autosys - How to remove conditions]({{ site.baseurl }}/posts/Autosys-How-to-remove-conditions/)

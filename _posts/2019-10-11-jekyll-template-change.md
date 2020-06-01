@@ -33,5 +33,3 @@ I still have to fix some issues with this new theme like 'get the contact form w
 I understand this is not a cleanest and practical way of updating the theme, but like I said, my blog didn't have much stuffs that I was worried about getting corrupted with my experimentation. I still feel Jekyll community needs to come up with a good solution for updating the Jekyll theme without much hassles.
 
 If you come across anything better, kindly drop me a line.
-
-## See Also

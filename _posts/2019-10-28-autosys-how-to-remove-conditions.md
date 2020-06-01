@@ -22,7 +22,3 @@ This can be achieved using a simple `update_job` command as below :
 Yes, we just have to leave blank after `condtion` and that is all required.
 
 If you are reading through this post looking for 'how to remove autosys job condition', hope this might have helped you.
-
-## See Also
-
-* [Autosys - How to prevent multiple jobs from running at the same time]({{ site.baseurl }}/posts/Autosys-How-to-prevent-multiple-jobs-from-running-at-the-same-time/)

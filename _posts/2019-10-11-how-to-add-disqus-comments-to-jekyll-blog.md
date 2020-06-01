@@ -68,7 +68,3 @@ git push -u origin master
 ```
 That's all, your static Jekyll website is now powered with Disqus commenting system.
 Please let me know through comments if this post was helpful to you, or if you need any help setting this up. Good Luck :)
-
-## See Also
-
-* [Change Jekyll Template]({{ site.baseurl }}/posts/Change-Jekyll-Template/)

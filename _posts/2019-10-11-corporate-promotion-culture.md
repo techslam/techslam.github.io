@@ -16,5 +16,3 @@ Sometimes 'promotion' policy in a corporate IT organization doesn't make sense f
 Years pass by with same repeated reasons and you are stuck at where you are, your manager keeps changing over the years and finally your organisation announces a new learning and career growth system which is so good that now you can focus on your capability and learnings and then get promoted in few months time. Folks with way less experience in the organisation are exposed to this new system of learning and growth so early in their career that they are reaping its benefits. But what about those who gave years of experience to the organisation but stuck at same level for quite long period due to prior promotion system?
 
 What are the reasons that you hear from your managers for not getting promoted?
-
-## See Also

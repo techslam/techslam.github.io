@@ -18,9 +18,3 @@ So I decided to create one with the help of already existing templates.
 [Watch the screencast on how to install this plugin](https://www.youtube.com/watch?v=0qilnS-sync) 
 
 Please leave your valuable comments if you found this useful and if you need any hep with this.
-
-## See Also
-
-* [Autosys - How to prevent multiple jobs from running at the same time]({{ site.baseurl }}/posts/Autosys-How-to-prevent-multiple-jobs-from-running-at-the-same-time/)
-* [Autosys - How to remove conditions]({{ site.baseurl }}/posts/Autosys-How-to-remove-conditions/)
-
