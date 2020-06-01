@@ -1,4 +1,6 @@
 # The Site Settings
+# v2.0
+# https://github.com/cotes2020/jekyll-theme-chirpy
 # © 2017-2019 Cotes Chung
 # MIT licensed
 
@@ -6,16 +8,19 @@
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 #--------------------------
 
-title: Techslam
+title: Techslam                          # the main title
 
-description: 'A Technical Blog by Aslam.'
+tagline: Technical Blog by Aslam.  # it will display as the sub-title
 
-# Replace with your domain, e.g. "https://username.github.io"
+description: >-                        # used by seo meta and the atom feed
+  A Technical Blog by Aslam.
+
+# Replace with the website url, e.g. 'https://username.github.io'
 url: 'https://techslam.net'
 
-author: Aslam                          # change to your full name
+author: Aslam                  # change to your full name
 
-logo: /assets/img/sample/techslam.jpeg    # Support network resources.
+avatar: /assets/img/sample/techslam.jpeg   # support internet resources
 
 github:
   username: techslam             # change to your github username
@@ -24,37 +29,57 @@ twitter:
   username: tweeslam            # change to your twitter username
 
 social:
-  name: Aslam                          # change to your full name
+  name: Aslam                  # it will shows as the copyright owner in Footer
   email: aslam9895@gmail.com             # change to your email address
   links:
-    - https://twitter.com/tweeslam      # change to your twitter homepage
-    - https://github.com/techslam       # change to your github homepage
+    # The first element serves as the copyright owner's link
+    - https://twitter.com/tweeslam     # change to your twitter homepage
+    - https://github.com/techslam      # change to your github homepage
+    # Uncomment below to add more social links
     # - https://www.facebook.com/username
-    - https://www.linkedin.com/in/mohammed-aslam-224ab613
+    # - https://www.linkedin.com/in/username
 
 google_site_verification: googlebbcf89216b32bb9c.html # change to your verification string
 
 #--------------------------
 
-# Change to your Google Analytics ID
-google_analytics:
-  id: 'UA-149906857-1'
-  # Switch for Google Analytics pageviews. DO NOT enable it unless you know how to deploy the Google Analytics superProxy.
-  pv: false
-
-disqus:
-  shortname: 'techslam'   # Change to your Disqus shortname.
-  comments: true        # boolean type, the gobal switch of posts' comments.
-
-# The year your website was first run.
-first_run: 2019
-
-# boolean type, gobal switch for ToC in posts.
-toc: true
-
-
 # if your site type is Project Pages site, change below value to '/projectname'
 baseurl: ''
+
+# Change to your timezone › http://www.timezoneconverter.com/cgi-bin/findzone/findzone
+timezone: Europe/London
+
+google_analytics:
+  # Fill with your Google Analytics ID
+  id: 'UA-149906857-1'
+  # The Google Analytics pageviews switch.
+
+  pv:
+    # DO NOT enable it unless you know how to deploy the Google Analytics superProxy.
+    enabled: false
+    # the next options only valid when `google_analytics.pv` is enabled.
+    proxy_url: ''
+    proxy_endpoint: ''
+    cache: false  # pv data local cache, good for the users from GFW area.
+
+disqus:
+  comments: true  # boolean type, the global switch for posts comments.
+  shortname: 'techslam'    # Fill with your Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
+
+
+# Prefer color scheme setting, available values:
+#
+#     dual   - Follow the system prefer color by default, and a toggle will display
+#              in the left bottom of Sidebar, which used for switch the theme between dark and light.
+#
+#     light  - Use the light color scheme
+#
+#     dark   - Use the dark color scheme
+#
+theme_mode: dual
+
+# boolean type, global switch for ToC in posts.
+toc: true
 
 paginate: 10
 
@@ -99,6 +124,7 @@ defaults:
     scope:
       path: tags
     values:
+      tab_active: Tags
       location: Tag
       breadcrumb:
         -
@@ -111,6 +137,7 @@ defaults:
     scope:
       path: categories
     values:
+      tab_active: Categories
       location: Category
       breadcrumb:
         -
@@ -124,13 +151,12 @@ defaults:
       path: tabs
     values:
       layout: page
-      dynamic_title: true    # hide title in mobile screens.
+      dynamic_title: true    # Hide title in mobile screens.
       breadcrumb:
         -
           label: Home
           url: /
 
-timezone: Asia/Shanghai
 
 sass:
   sass_dir: /assets/css
@@ -139,28 +165,33 @@ sass:
 compress_html:
   clippings: all
   comments: ["<!-- ", " -->"]
-  endings: [html, head, body, dt, dd, rt, rp, optgroup, option, colgroup, caption, thead, tbody, tfoot, tr, td, th]
+  endings: [html, head, body, dt, dd, rt, rp,
+            optgroup, option, colgroup, caption,
+            thead, tbody, tfoot, tr, td, th]
   profile: false
   blanklines: false
   ignore:
     envs: []
 
 exclude:
-  - vendor/       # Avoid Jekyll mistakenly read the vender directory in Travis-CI's VM .
+  - vendor        # Avoid Jekyll mistakenly read the vendor directory on Travis-CI's VM .
   - Gemfile.lock
   - Gemfile
-  - run.sh
-  - build.sh
-  - init.sh
-  - pv.sh
+  - tools
+  - docs
+  - README.md
 
 sitemap_exclude:  # Sitemap will exclude the following items.
-  - /norobots/
-  - /assets/
-  - /tabs/
-  - /categories/
-  - /tags/
-  - /posts/
-  - /404.html
-  - /redirects.json
-  - /search.json
+  fuzzy:
+    - /assets/
+  accurate:
+    - /norobots/
+    - /tabs/
+    - /categories/
+    - /tags/
+    - /posts/
+    - 404.html
+    - feed.xml
+    - sitemap.xml
+    - robots.txt
+    - redirects.json

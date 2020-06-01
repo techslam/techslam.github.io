@@ -1,74 +1,76 @@
 <!--
   The Pannel on right side (Desktop views)
+  v2.0
+  https://github.com/cotes2020/jekyll-theme-chirpy
   © 2017-2019 Cotes Chung
   MIT License
 -->
 
-<div class="panel-group">
+<div id="panel-wrapper" class="col-xl-3 pl-2 text-muted topbar-down">
 
-  {% assign lastmod_list = "" | split: "" %}
+  <div class="access">
 
-  {% for post in site.posts %}
-    {% if post.date >= post.seo.date_modified or post.seo.date_modified == nil %}
-      {% continue %}
-    {% endif%}
-    {% capture item %}
-      {{ post.seo.date_modified }}::{{ post.title }}::{{ post.url }}
-    {% endcapture %}
-    {% assign lastmod_list = lastmod_list | push: item %}
-  {% endfor %}
+  {% if site.data.updates %}
 
-  {% if lastmod_list.size > 0 %}
-  <div id="panel-update" class="post mb-4"">
-    <h3 data-toc-skip>
-      {{ site.data.label.panel.lastmod }}
-    </h3>
-    <ul class="post-content pl-0 mt-2 pb-1">
-    {% assign MAX_SIZE = 5 %}
-    {% assign sum = 0 %}
-    {% assign sorted_posts = lastmod_list | sort | reverse %}
-    {% for post in sorted_posts %}
-      {% assign meta = post | split: "::" %}
-      <li><a href="{{ meta[2] | prepend: site.baseurl }}">{{ meta[1] }}</a></li>
-      {% assign sum = sum | plus: 1 %}
-      {% if sum >= MAX_SIZE %}
-        {% break %}
-      {% endif %}
-    {% endfor %}
-    </ul>
-  </div><!-- #panel-update -->
+    {% include update_list.html %}
+
+    {% if update_list.size > 0 %}
+
+    <div id="access-lastmod" class="post">
+      <h3 data-toc-skip>
+        {{- site.data.label.panel.lastmod -}}
+      </h3>
+      <ul class="post-content pl-0 pb-1 ml-1 mt-2">
+
+      {% for item in update_list %}
+        {% assign post_url = item | split: "::" | last | prepend: "/posts/" | append: "/" %}
+        {% assign post = site.posts | where: "url", post_url | first %}
+
+        {% if post %}
+          {% assign url = post.url | relative_url %}
+
+          <li><a href="{{ url }}">{{ post.title }}</a></li>
+
+          {% assign sum = sum | plus: 1 %}
+          {% if sum >= MAX_SIZE %} {% break %} {% endif %}
+
+        {% endif %}
+
+      {% endfor %}
+
+      </ul>
+    </div><!-- #access-lastmod -->
+
+    {% endif %}
+
+  {% endif %} <!-- site.data.updates -->
+
+  {% include trending_tags.html %}
+
+  {% if trending_tags.size > 0 %}
+    <div id="access-tags">
+      <h3 data-toc-skip>
+        {{- site.data.label.panel.trending_tags -}}
+      </h3>
+      <div class="d-flex flex-wrap mt-3 mb-1 mr-3">
+
+      {% for tag in trending_tags %}
+        {% capture url %}/tags/{{ tag | downcase | url_encode }}/{% endcapture %}
+        <a class="post-tag" href="{{ url | relative_url }}">{{ tag | replace: '-', ' ' }}</a>
+       {% endfor %}
+      </div>
+    </div>
   {% endif %}
 
-  <div id="panel-tags">
-    <h3 data-toc-skip>
-      {{ site.data.label.panel.trending_tags }}
+  </div> <!-- .access -->
+
+  {% if page.layout == 'post' and site.toc and page.toc %}
+  <div id="toc-wrapper" class="pl-0 pr-4 mb-5">
+    <h3 data-toc-skip class="pl-3 pt-2 mb-3">
+      {{- site.data.label.panel.toc -}}
     </h3>
-    <div class="d-flex flex-wrap mt-2 pb-1 pr-3">
-      {% capture tags_array %}
-        {% for tag in site.tags %}
-          {{ tag[1] | size }}:{{ tag[0] | replace: ' ', '-' }}
-        {% endfor %}
-      {% endcapture %}
+    <nav id="toc" data-toggle="toc"></nav>
+  </div>
+  {% endif %}
 
-      {% assign MAX = 10 %}
-      {% assign count = 0 %}
-      {% assign trends = tags_array | split: " " | sort | reverse %}
-
-      <div>
-      <!-- <p>tags_array->{{ tags_array }}</p> -->
-      {% for trend in trends %}
-        {% assign count = count | plus: 1 %}
-        {% assign tag = trend | split: ":" | last  %}
-        <a class="post-tag" href="{{ site.baseurl }}/tags/{{ tag | downcase }}/">{{ tag | replace: '-', ' ' }}</a>
-        {% if count >= MAX %}
-          {% break %}
-        {% endif %}
-      {% endfor %}
-      </div>
-
-    </div>
-  </div><!-- #panel-tags -->
-
-{% include subscribe.html %}
-
-</div>
+</div> <!-- #panel-wrapper -->
